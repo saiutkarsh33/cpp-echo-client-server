@@ -62,7 +62,7 @@ int main() {
             continue;
         }
         buf[n] = '\0';                  // NUL-terminate
-        std::cout << "echoed: " << buf << "\n";
+        std::cout << "from server: " << buf << "\n";
 
     }
     // after user pressed ctrl D

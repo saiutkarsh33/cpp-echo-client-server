@@ -23,6 +23,13 @@ int main() {
     }
 
     // 3. Connect to the server
+// When you call connect(), the kernel auto-fills the missing info:
+
+// Chooses a local ephemeral port (like 48912) from a valid dynamic port range (e.g., 49152–65535)
+
+// Assigns a source IP address based on the routing table (i.e., the interface used to reach the server)
+
+// Internally performs the 3-way TCP handshake
     if (connect(sockfd, (sockaddr*)&serv, sizeof(serv)) < 0) {
         perror("connect");
         return 1;
